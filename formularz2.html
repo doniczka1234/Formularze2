@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Formularz 2</title>
+	
+	</head>
+ <body>
+	<form action="mailto:www@wp.pl" method="post" enctype="multipart/form-data">
+	<!-- Autocomplete - miejsce musi zostac uzupelnione? -->
+		<label>Podaj nazwisko: <input type="text" name="nazw" autocomplete="off"></label>
+		<label>Podaj imie: <input type="text" name="im" autofocus required></label>
+		<!-- Anna wyswietla jako podpowiedz -->
+		<label>Podaj imie2: <input type="text" name="im2" placeholder="Anna"></label>
+		<!-- number powoduje ze ikonka  -->
+		<label>Podaj liczbe: <input type="number" name="numer" min="10" max="20"></label>
+		<!-- textarea sluzy do wpisywania komentarzy i roznego rodzaju tekstu -->
+		<label><textarea name="pole" cols="30" rows="10" wrap="soft"> </textarea> </label>
+		<p> Wybierz przedmioty: </p>
+		<!-- optgroup - dwie grupy  -->
+		<select name="przedmioty">
+			<optgroup label="humanistyczne">
+				<option value="pols"> j. polski</option>
+				<option value="ang"> j. angielski</option>
+				<option value="niem"> j. niemiecki</option>
+			</optgroup>
+			<optgroup label="zawodowe">
+				<option value="utk"> utk</option>
+				<option value="so"> so</option>
+				<option value="tsi"> tsi</option>
+			</optgroup>
+		</select>
+		<!-- datalist id identyfikator - podpowiedzi /  lista  -->
+		<p> Wpisz swoje zainteresowanie: </p>
+		<input type="text" name="zaint" list="identyfikator">
+		<datalist id="identyfikator">
+			<option> sport</option>
+			<option> muzyka</option>
+			<option> fotografia</option>
+		</datalist>
+		<!-- w ten sposób dodajemy plik,ktory chcemy wyslac-->
+		<input type="file" name="plik">
+		<h1> Inne pola</h1>
+		<!-- type nrtel, sugeruje klawiature numeryczna -->
+		Podaj nr telefonu: <input type="tel" name="nrtel"><br/>
+		Podaj adres szkoły: <input type="url" name="adres"><br/>
+		Podaj maila: <input type="email" name="poczta"><br/>
+		Podaj datę: <input type="date" name="data"> <br/>
+		Godzina: <input type="time" name="time_1"> <br />
+		Miesiąc: <input type="month" name="month_1"> <br />
+		Tydzień: <input type="week" name="week_1"><br />
+		Znajdź: <input type="search" name="search_1"><br />
+		<!-- Znajdz zakres liczb |  -->
+		Zakres liczb: <input type="range" name="range_1" min="0" max="100" /> Zakres liczb<br />
+		<!-- Wybor koloru -->
+		Kolor: <input type="color" name="color_1"><br />
+		
+		<h3> Graficzna prezentacja liczby 10 w przedziale liczb 0..20 oraz wartości 10 w przedziale 0..100</h3>
+	
+  <meter min="0" max="20" value="10"></meter> Liczba 10 w przedziale 0..20<br /><br />
+  <meter min="0" max="100" value="10"></meter> Liczba 10 w przedziale 0..100
+		<h3> Prezentacja paska postępu</h3>
+		  <progress  id="p" max="100" value="50"> </progress>  Znacznik postępu
+		  <!-- Fajny kurs / kaniuch poleca stad prezentacje itd -->
+		<h3> Poprawnośc danych: http://www.glowacki.p9.pl/nowa_strona/strony/niedatowane/kurs_html5/k_2_6_6.php</h3>
+		
+		<input type="submit" value="OK"><br/>
+	</form>
+ </body>
+</html>
